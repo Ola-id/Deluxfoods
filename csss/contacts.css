@@ -1,0 +1,532 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* customized scrrollbar */
+::-webkit-scrollbar{
+width: 5px;
+}
+::-webkit-scrollbar-track{
+background: black;
+}
+::-webkit-scrollbar-thumb{
+background: gold;
+}
+::-webkit-scrollbar-thumb:hover{
+background: goldenrod;
+}
+html{
+scroll-behavior: smooth;
+}
+
+/* Navigation Styles */
+nav {
+padding: 0 5%;
+background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+z-index: 999;
+position: fixed;
+margin-top: 0px;
+height: 90px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+border-bottom: 1px solid gold;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px ;
+}
+.logo {
+color: gold;
+font-size: 30px;
+}
+.logo span {
+color: white;
+}
+nav ul {
+list-style-type: none;
+display: flex;
+gap: 20px;
+padding: 0;
+margin: 0;
+}
+nav   li {
+font-size: 18px;
+color: white;
+transition: all 0.5s ease-in-out;
+margin-left: 40px;
+}
+nav ul a{
+text-decoration: none;
+color: white;
+}
+nav li{
+list-style: none;
+}
+nav ul a:hover{
+color: gold;
+}
+.homen:before{
+content: "";
+position: absolute;
+width: 3.5%;
+left: 10;
+top: 70%;
+background-color: #fff;
+height: 3px;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in;
+}
+.homen:hover::before{
+visibility: visible;
+color: black;
+transform: scaleX(1);
+}
+.aboutn:before{
+content: "";
+position: absolute;
+width: 4%;
+left: 20;
+top: 70%;
+background-color: #fff;
+height: 3px;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in;
+}
+.aboutn:hover::before{
+visibility: visible;
+color: black;
+transform: scaleX(1);
+}
+.blogsn:before{
+content: "";
+position: absolute;
+width: 3%;
+left: 30;
+top: 70%;
+background-color: #fff;
+height: 3px;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in;
+}
+.blogsn:hover::before{
+visibility: visible;
+color: black;
+transform: scaleX(1);
+}
+.coursesn:before{
+content: "";
+position: absolute;
+width: 5%;
+left: 40;
+top: 70%;
+background-color: #fff;
+height: 3px;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in;
+}
+.coursesn:hover::before{
+visibility: visible;
+color: black;
+transform: scaleX(1);
+}
+.contactsn:before{
+content: "";
+position: absolute;
+width: 5%;
+left: 50;
+top: 70%;
+background-color: #fff;
+height: 3px;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in;
+}
+.contactsn:hover::before{
+visibility: visible;
+color: black;
+transform: scaleX(1);
+}
+.placeordern:before{
+content: "";
+position: absolute;
+width: 10%;
+left: 10;
+top: 70%;
+background-color: #fff;
+height: 3px;
+visibility: hidden;
+transform: scaleX(0);
+transition: all 0.3s ease-in;
+}
+.placeordern:hover::before{
+visibility: visible;
+color: black;
+transform: scaleX(1);
+}
+
+
+/* drop down edit */
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
+margin-top: 0px;
+display: none;
+position: absolute;
+background-color: whitesmoke ;
+min-width: 120px;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 1);
+z-index: 1;
+border-radius: 10px;
+}
+.dropdown-content a {
+color: black;
+padding: 10px 12px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+background-color: #aaa8a8;
+color: gold;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.navf{
+display: none;
+flex-direction: column;
+background: black;
+position: absolute;
+top: 90px;
+left: 0;
+width: 50%;
+border-radius: 0px 0px 20px 10px;
+}
+.hamburger {
+display: block;
+cursor: pointer;
+font-size: 24px;
+color: white;
+}
+@media (min-width: 768px) {
+.navf {
+display: flex;
+flex-direction: row;
+position: static;
+width: auto;
+background: none;
+}
+.hamburger {
+display: none;
+}
+.navf ul  a {
+border: none;
+padding: 10px 20px;
+}
+}
+
+/* drop down edit end */
+
+/* navigation styles end */
+
+/* home style */
+.home{
+background:  linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.9)), url("../img/hero-bg.jpg");
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+color: #fff;
+height: 700px;
+}
+.home .fw{
+padding-top: 150px;
+font-size: 80px;
+font-weight: 500;
+color: white;
+text-align: center;
+}
+.home .fw span{
+color: gold;
+}
+.home .sw{
+font-size: 18px;
+text-align: center;
+padding: 5px 40px;
+font-weight: 400;
+padding-bottom: 25px;
+}
+.home .sw span{
+color: gold;
+}
+.home .cobtnho a{
+text-decoration: none;
+color: gold;
+font-size: 25px;
+padding: 20px;
+border: 1px solid gold;
+border-radius: 10px 20px 2px 20px;
+margin-left: 500px;
+transition: all o.3s ease-in-out;
+}
+.home .cobtnho a:hover{
+background: gold;
+color: white;
+border: 0px;
+}
+@media screen and (max-width: 768px) {
+.home{
+height: 600px;
+}
+.home .fw{
+padding-top: 150px;
+font-size: 30px;
+}
+.home .sw{
+font-size: 17px;
+text-align: center;
+padding: 5px 10px;
+font-weight: 400;
+padding-bottom: 25px;
+}
+
+.home .cobtnho a{
+
+font-size: 18px;
+padding: 10px;
+margin-left: 60px;
+}
+.home .cobtnho a:hover{
+background: gold;
+color: white;
+border: 0px;
+}
+}
+
+
+/* footer */
+footer{
+background: black;
+margin-top: 1px;
+padding-top: 50px;
+}
+.foosec1{
+margin-left: 30px;
+color: white;
+}
+.foosec1 h1{
+font-size: 25px;
+padding: 10px;
+}
+.foosec1 h1 span{
+color: gold;
+}
+.foosec1 img{
+width: 100px;
+height: auto;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+.foosec1 ul {
+font-size: 20px;
+margin-left: -30px;
+color: white;
+padding-top: 40px;
+}
+.foosec1 ul i{
+margin-right: 5px;
+cursor: pointer;
+border: 1px solid gray;
+border-radius: 50%;
+padding: 5px;
+}
+.foosec1 ul i:hover{
+color: gold;
+border: 1px solid gold;
+}
+
+.foosec2 h5{
+color: whitesmoke;
+font-size: 18px;
+}
+.foosec2 .af{
+padding: 8px 0px;
+}
+.foosec2 .af a{
+text-decoration: none;
+color: gray;
+font-size: 15px;
+}
+.foosec2 .af a:hover{
+color: goldenrod;
+}
+.foosec3 h5{
+color: whitesmoke;
+font-size: 18px;
+}
+.foosec3 p{
+padding: 8px 0px;
+color: gray;
+font-size: 17px;
+}
+.subscribe-container {
+position: relative;
+width: 300px;
+height: 50px;
+border-radius: 25px;
+background-color: white;
+border: 1px solid gray;
+overflow: hidden;
+}
+.progress {
+position: absolute;
+height: 100%;
+width: 0;
+background-color: gray;
+transition: width 1s ease-in-out;
+}
+.subscribe-button {
+position: absolute;
+right: 0;
+height: 100%;
+width: 120px;
+background-color: goldenrod;
+border: none;
+border-radius: 25px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.3s ease-in;
+}
+.subscribe-container:hover .progress {
+width: 100%;
+}
+footer .row hr{
+color: gold;
+font-size: 20px;
+width: 80%;
+margin-left: 100px;
+margin-top: 20px;
+}
+.foolastext{
+margin-top: 10px;
+}
+.cotext{
+color: gray;
+font-size: 15px;
+text-align: center;
+}
+.coimg{
+margin-left: 900px;
+}
+
+@media screen and (max-width:768px) {
+.foosec1{
+margin-left: 3px;
+color: white;
+}
+footer{
+padding-bottom: 60px;
+}
+.foosec2{
+padding-top: 30px;
+}
+footer .row hr{
+color: gold;
+font-size: 20px;
+width: 80%;
+margin-left: 20px;
+margin-top: 20px;
+}
+.foosec3{
+padding-top: 30px;
+}
+.subscribe-container {
+width: 350px;
+}
+.coimg{
+margin-left: 100px;
+margin-top: 2px;
+}
+}
+/* footer end */
+
+
+
+/* pre loader */
+#preloader {
+position: fixed;
+width: 100%;
+height: 100%;
+background-color: black ;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-size: 20px;
+font-weight: bold;
+color: gold;
+transition: opacity 0.5s ease-out;
+}
+/* Spinning circle */
+.loader {
+border: 5px solid gold;
+border-top: 5px solid goldenrod;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+animation: spin 1s linear infinite;
+margin-bottom: 10px;
+}
+/* Animation for spinning */
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+/* Hide content initially */
+#content {
+display: none;
+}
+/* preloader */
+
+
+/* scroll up btn */
+#scrollToTopBtn {
+position: fixed;
+bottom: 30px;
+right: 30px;
+background-color: white;
+color: gold;
+border: 1px solid gold;
+border-radius: 50%;
+padding: 18px;
+font-size: 22px;
+cursor: pointer;
+display: none;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transition: background-color 0.3s;
+}
+#scrollToTopBtn:hover {
+background-color: gold;
+color: white;
+}
+@media screen  and (max-width: 768px) {
+#scrollToTopBtn {
+position: fixed;
+bottom: 10px;
+right: 30px;
+border-radius: 45%;
+padding: 10px;
+font-size: 17px;
+}
+
+}
+/* scroll up btn */
